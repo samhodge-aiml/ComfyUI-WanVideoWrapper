@@ -13,3 +13,53 @@ Repository = "https://github.com/kijai/ComfyUI-WanVideoWrapper"
 PublisherId = "kijai"
 DisplayName = "ComfyUI-WanVideoWrapper"
 Icon = ""
+
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = [ 
+    "ComfyUI_WanVideo_nodes", 
+    "ComfyUI_WanVideo_nodes.configs",
+    "ComfyUI_WanVideo_nodes.diffsynth.vram_management",
+    "ComfyUI_WanVideo_nodes.enhance_a_video",
+    "ComfyUI_WanVideo_nodes.fantasytalking",
+    "ComfyUI_WanVideo_nodes.fun_camera",
+    "ComfyUI_WanVideo_nodes.recammaster",
+    "ComfyUI_WanVideo_nodes.skyreels",
+    "ComfyUI_WanVideo_nodes.taehv",
+    "ComfyUI_WanVideo_nodes.unianimate",
+    "ComfyUI_WanVideo_nodes.unianimate.dwpose",
+    "ComfyUI_WanVideo_nodes.wanvideo",
+    "ComfyUI_WanVideo_nodes.wanvideo.configs",
+    "ComfyUI_WanVideo_nodes.wanvideo.modules",
+    "ComfyUI_WanVideo_nodes.wanvideo.utils",
+]
+
+[tool.setuptools.package-dir]
+"ComfyUI_WanVideo_nodes" = "."
+"ComfyUI_WanVideo_nodes.configs" = "configs"
+"ComfyUI_WanVideo_nodes.enhance_a_video" = "enhance_a_video"
+"ComfyUI_WanVideo_nodes.diffsynth.vram_management" = "diffsynth/vram_management"
+"ComfyUI_WanVideo_nodes.fantasytalking" = "fantasytalking"
+"ComfyUI_WanVideo_nodes.fun_camera" = "fun_camera"
+"ComfyUI_WanVideo_nodes.recammaster" = "recammaster"
+"ComfyUI_WanVideo_nodes.skyreels" = "skyreels"
+"ComfyUI_WanVideo_nodes.taehv" = "taehv"
+"ComfyUI_WanVideo_nodes.unianimate" = "unianimate"
+"ComfyUI_WanVideo_nodes.unianimate.dwpose" = "unianimate.dwpose"
+"ComfyUI_WanVideo_nodes.wanvideo" = "wanvideo"
+"ComfyUI_WanVideo_nodes.wanvideo.configs" = "wanvideo/configs"
+"ComfyUI_WanVideo_nodes.wanvideo.modules" = "wanvideo/modules"
+"ComfyUI_WanVideo_nodes.wanvideo.utils" =  "wanvideo/utils"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+[tool.setuptools.package-data]
+"*" = ["**/*.js", "**/*.json", "**/*.model", "*.pt"]
+
+[project.entry-points."comfyui.custom_nodes"]
+ComfyUI_WanVideo_nodes = "ComfyUI_WanVideo_nodes"
