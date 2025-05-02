@@ -8,7 +8,7 @@ from accelerate.utils import set_module_tensor_to_device
 
 import comfy.model_management as mm
 from comfy.utils import load_torch_file
-import folder_paths
+from comfy.cmd import folder_paths as folder_paths
 
 script_directory = os.path.dirname(os.path.abspath(__file__))
 

@@ -3,7 +3,7 @@ from PIL import Image
 from comfy.cli_args import args, LatentPreviewMethod
 from comfy.taesd.taesd import TAESD
 import comfy.model_management
-import folder_paths
+from comfy.cmd import folder_paths as folder_paths
 import comfy.utils
 import logging
 import os

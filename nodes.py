@@ -23,7 +23,7 @@ from accelerate import init_empty_weights
 from accelerate.utils import set_module_tensor_to_device
 from einops import rearrange
 
-import folder_paths
+from comfy.cmd import folder_paths as folder_paths
 import comfy.model_management as mm
 from comfy.utils import load_torch_file, ProgressBar, common_upscale
 import comfy.model_base
